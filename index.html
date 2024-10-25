@@ -15,6 +15,7 @@
   img {
     width: 100%;
     height: 100%;
+    z-index: 100;
   }
   .body_container {
     width: 100%;
@@ -34,10 +35,26 @@
     position: fixed;
     z-index: 1000;
   }
-  .section1 { background-color: lightblue; height: 850px; position: relative; }
-  .section2 { background-color: lightgreen; height: 800px; position: relative; }
-  .section3 { background-color: lightcoral; height: 800px; position: relative; }
-  .between_section { background-color: rgb(5, 5, 20); height: 200px; position: relative; }
+  .section1 { 
+    background-color: lightblue; 
+    height: 850px; 
+    position: relative;  
+  }
+  .section2 { 
+    background-color: lightgreen; 
+    height: 800px; 
+    position: relative; 
+  }
+  .section3 { 
+    background-color: lightcoral; 
+    height: 800px; 
+    position: relative; 
+  }
+  .between_section { 
+    background-color: rgb(5, 5, 20); 
+    height: 200px; 
+    position: relative; 
+  }
 
   .button { border: none; color: white; padding: 20px 34px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; cursor: pointer; }
 
@@ -50,6 +67,39 @@
     color: yellow;
   }
 
+  .info_container {
+    background-color: black;
+    position: absolute;
+  }
+
+  .info_text_container {
+    font-size: 30px;
+    position: absolute;
+    text-align: center;
+    color: white;
+  }
+
+  .hover_area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hidden_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 800; 
+  }
+
+  .hidden_image:hover {
+    opacity: 1;
+  }
+
 </style> 
 </head>
 <body>
@@ -60,15 +110,18 @@
       <a href="#section3" class="button">Articles</a>
     </div>
   </heading>
+
   <div class="body_container">
 
-    <section class="section1"; id="section1">
-      <img src="sky.jpg">
-      <h1 class="title"> Light Pollution </h1>
+    <section class="section1" id="section1">
+      <div class="hover_area">
+        <img src="sky_dark.jpg">
+        <img src="sky.jpg" class="hidden_image">
+      </div>
     </section>
 
     <section class="between_section">
-      <h1 class="title"> MAP </h1>
+      <h1 class="title"> LIGHT POLLUTION MAP </h1>
     </section>
 
     <section class="section2"; id="section2">
@@ -79,7 +132,7 @@
 
     <section class="section3"; id="section3">
       <img src="city.jpg">
-      <h1 class="title"> Light Pollution </h1>
+      <h1 class="title"></h1>
     </section>
 
   </div>
