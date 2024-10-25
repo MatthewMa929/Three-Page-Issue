@@ -15,7 +15,7 @@
   img {
     width: 100%;
     height: 100%;
-    z-index: 100;
+    z-index: -100;
   }
   .body_container {
     width: 100%;
@@ -37,7 +37,7 @@
   }
   .section1 { 
     background-color: lightblue; 
-    height: 850px; 
+    height: 100vh; 
     position: relative;  
   }
   .section2 { 
@@ -65,6 +65,7 @@
     top: 15%;
     width: 100%;
     color: yellow;
+    z-index: 100;
   }
 
   .info_container {
@@ -77,6 +78,10 @@
     position: absolute;
     text-align: center;
     color: white;
+    z-index: 100;
+    width: 100%;
+    left: 50%; 
+    transform: translateX(-50%);
   }
 
   .hover_area {
@@ -91,13 +96,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
     z-index: 800; 
   }
 
   .hidden_image:hover {
-    opacity: 1;
+    opacity: 0;
   }
 
 </style> 
@@ -114,6 +119,10 @@
   <div class="body_container">
 
     <section class="section1" id="section1">
+      <h1 class="title">LIGHT POLLUTION</h1>
+      <p class="info_text_container"style="top:280px; width:600px;">
+        The excessive or inappropriate use of outdoor artificial light, is affecting human health, wildlife behavior, and our ability to observe stars and other celestial objects
+      </p>
       <div class="hover_area">
         <img src="sky_dark.jpg">
         <img src="sky.jpg" class="hidden_image">
