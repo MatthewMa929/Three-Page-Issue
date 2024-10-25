@@ -7,6 +7,7 @@
     height: 100%;
     overflow: hidden;
     margin: 0px;
+    background-color: black;
   }
   heading {
     height: 100px;
@@ -30,31 +31,45 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed
+    position: fixed;
+    z-index: 1000;
   }
-  .section1 { background-color: lightblue; height: 800px }
-  .section2 { background-color: lightgreen; height: 800px }
-  .section3 { background-color: lightcoral; height: 800px }
-  .between_section { background-color: darkslateblue; height: 200px }
+  .section1 { background-color: lightblue; height: 850px; position: relative; }
+  .section2 { background-color: lightgreen; height: 800px; position: relative; }
+  .section3 { background-color: lightcoral; height: 800px; position: relative; }
+  .between_section { background-color: rgb(5, 5, 20); height: 200px; position: relative; }
 
   .button { border: none; color: white; padding: 20px 34px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; cursor: pointer; }
+
+  .title {
+    font-size: 50px;
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    width: 100%;
+    color: yellow;
+  }
+
 </style> 
 </head>
 <body>
   <heading>
     <div class="heading_container">
-      <a href="#section1" class="button">Click Here</a>
-      <a href="#section2" class="button">Click Here</a>
-      <a href="#section3" class="button">Click Here</a>
+      <a href="#section1" class="button">Introduction</a>
+      <a href="#section2" class="button">Map</a>
+      <a href="#section3" class="button">Articles</a>
     </div>
   </heading>
   <div class="body_container">
 
     <section class="section1"; id="section1">
-      <img src="city.jpg">
+      <img src="sky.jpg">
+      <h1 class="title"> Light Pollution </h1>
     </section>
 
-    <section class="between_section"></section>
+    <section class="between_section">
+      <h1 class="title"> MAP </h1>
+    </section>
 
     <section class="section2"; id="section2">
       <img src="Light_pollution_map.png">
@@ -64,6 +79,7 @@
 
     <section class="section3"; id="section3">
       <img src="city.jpg">
+      <h1 class="title"> Light Pollution </h1>
     </section>
 
   </div>
