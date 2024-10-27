@@ -8,6 +8,7 @@
     overflow: hidden;
     margin: 0px;
     background-color: black;
+    font-family: calibri;
   }
   heading {
     height: 100px;
@@ -39,6 +40,7 @@
     background-color: lightblue; 
     height: 100vh; 
     position: relative;  
+    display:flex;
   }
   .section2 { 
     background-color: lightgreen; 
@@ -47,7 +49,7 @@
   }
   .section3 { 
     background-color: lightcoral; 
-    height: 800px; 
+    height: 1000px; 
     position: relative; 
   }
   .between_section { 
@@ -71,6 +73,9 @@
   .info_container {
     background-color: black;
     position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .info_text_container {
@@ -106,9 +111,16 @@
   }
 
   iframe {
-    position: absolute;
     top: 500;
     z-index: 1100;
+  }
+
+  a {
+    color: yellow;
+  }
+
+  p {
+    color: white;
   }
 
 </style> 
@@ -118,7 +130,7 @@
     <div class="heading_container">
       <a href="#section1" class="button">Introduction</a>
       <a href="#section2" class="button">Map</a>
-      <a href="#section3" class="button">Articles</a>
+      <a href="#section3" class="button">Learn more</a>
     </div>
   </heading>
 
@@ -144,13 +156,19 @@
     </section>
 
     <section class="between_section">
-      <h1 class="title">ARTICLES</h1>
+      <h1 class="title">LEARN MORE</h1>
     </section>
 
     <section class="section3"; id="section3">
-      <img src="city.jpg">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/0FXJUP6_O1w?si=e7BjFFaoYuxmFFVS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <a href="https://www.nwf.org/Home/Magazines/National-Wildlife/2023/Summer/Conservation/Light-Pollution-Wildlife">National Wildlife</a>
+      <img src="background_sky.jpg">
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0FXJUP6_O1w?si=RdC7mi6Mhhu_5v3_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen;></iframe>
+      <div class="info_container">
+        <a href="https://www.nwf.org/Home/Magazines/National-Wildlife/2023/Summer/Conservation/Light-Pollution-Wildlife">National Wildlife</a>
+        <p>: "How Light Pollution Impacts Wildlife & How You Can Help"</p>
+        <p>
+          Many animals are displaced by articial light, including sea turtle hatchlings. On beaches adjacent to roads and buildings, many emerging hatchlings head inland toward artificial lights instead of the ocean.
+        </p>
+      </div>
     </section>
 
   </div>
