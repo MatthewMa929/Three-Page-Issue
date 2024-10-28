@@ -54,24 +54,20 @@ p {
   z-index: 1000;
 }
 
-
-
-
-
 .section1 { 
-  background-color: lightblue; 
+  background-color: black; 
   height: 100vh; 
   position: relative;  
   display:flex;
 }
 .section2 { 
-  background-color: lightgreen; 
-  height: 800px; 
+  background-color: black; 
+  height: 100vh; 
   position: relative; 
 }
 .section3 { 
-  background-color: lightcoral; 
-  min-height: 1000px; 
+  background-color: black; 
+  min-height: 100vh; 
   position: relative; 
 }
 
@@ -96,7 +92,21 @@ p {
 
 .bottomOverlapContainer > div > * {
   width: 100%;
+}
 
+#section1 .bottomOverlapContainer {
+    align-items: center;               
+    text-align: center;
+    padding: 15em;
+    transform: translateY(-10%);
+}
+
+.paddingContainer {
+  padding: 10em;
+  top: 0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
 }
 
 .between_section { 
@@ -108,12 +118,14 @@ p {
 .button { border: none; color: white; padding: 20px 34px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; cursor: pointer; }
 
 .title {
+  display: flex;
   font-size: 50px;
-  position: absolute;
-  text-align: center;
-  top: 15%;
-  width: 100%;
   color: yellow;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .info_container {
