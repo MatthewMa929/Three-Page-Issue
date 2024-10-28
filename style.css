@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0px;
+  background-color: black;
+  font-family: calibri;
+}
+
+heading {
+  height: 100px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.sectionBackgroundImage {
+
+}
+
+iframe {
+}
+
+a {
+  color: yellow;
+}
+
+p {
+  color: white;
+}
+
+.body_container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-right: 17px; 
+  box-sizing: content-box;
+  scrollbar-width: none;
+}
+.heading_container {
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+}
+
+
+
+
+
+.section1 { 
+  background-color: lightblue; 
+  height: 100vh; 
+  position: relative;  
+  display:flex;
+}
+.section2 { 
+  background-color: lightgreen; 
+  height: 800px; 
+  position: relative; 
+}
+.section3 { 
+  background-color: lightcoral; 
+  min-height: 1000px; 
+  position: relative; 
+}
+
+.bottomOverlapContainer {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  gap: 1em;
+
+}
+
+.bottomOverlapContainer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex-basis: 100%;
+}
+
+.bottomOverlapContainer > div > * {
+  width: 100%;
+
+}
+
+.between_section { 
+  background-color: rgb(5, 5, 20); 
+  height: 200px; 
+  position: relative; 
+}
+
+.button { border: none; color: white; padding: 20px 34px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; cursor: pointer; }
+
+.title {
+  font-size: 50px;
+  position: absolute;
+  text-align: center;
+  top: 15%;
+  width: 100%;
+  color: yellow;
+}
+
+.info_container {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+
+/* justify-content: space-around; */
+/* align-items: center; */
+}
+
+
+.infoLinkContainer {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+.info_text_container {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+.hover_area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hidden_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 800; 
+}
+
+.hidden_image:hover {
+  opacity: 0;
+}

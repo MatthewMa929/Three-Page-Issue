@@ -1,131 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    margin: 0px;
-    background-color: black;
-    font-family: calibri;
-  }
-  heading {
-    height: 100px;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    z-index: -100;
-  }
-  .body_container {
-    width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-    padding-right: 17px; 
-    box-sizing: content-box;
-    scrollbar-width: none;
-  }
-  .heading_container {
-    height: 100px;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    z-index: 1000;
-  }
-  .section1 { 
-    background-color: lightblue; 
-    height: 100vh; 
-    position: relative;  
-    display:flex;
-  }
-  .section2 { 
-    background-color: lightgreen; 
-    height: 800px; 
-    position: relative; 
-  }
-  .section3 { 
-    background-color: lightcoral; 
-    height: 1000px; 
-    position: relative; 
-  }
-  .between_section { 
-    background-color: rgb(5, 5, 20); 
-    height: 200px; 
-    position: relative; 
-  }
 
-  .button { border: none; color: white; padding: 20px 34px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; cursor: pointer; }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
 
-  .title {
-    font-size: 50px;
-    position: absolute;
-    text-align: center;
-    top: 15%;
-    width: 100%;
-    color: yellow;
-    z-index: 100;
-  }
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-  .info_container {
-    background-color: black;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .info_text_container {
-    font-size: 30px;
-    position: absolute;
-    text-align: center;
-    color: white;
-    z-index: 100;
-    width: 100%;
-    left: 50%; 
-    transform: translateX(-50%);
-  }
-
-  .hover_area {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  .hidden_image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    z-index: 800; 
-  }
-
-  .hidden_image:hover {
-    opacity: 0;
-  }
-
-  iframe {
-    top: 500;
-    z-index: 1100;
-  }
-
-  a {
-    color: yellow;
-  }
-
-  p {
-    color: white;
-  }
-
-</style> 
 </head>
 <body>
+
   <heading>
     <div class="heading_container">
       <a href="#section1" class="button">Introduction</a>
@@ -137,13 +22,17 @@
   <div class="body_container">
 
     <section class="section1" id="section1">
-      <h1 class="title">LIGHT POLLUTION</h1>
-      <p class="info_text_container"style="top:250px; width:600px;">
-        The excessive or inappropriate use of outdoor artificial light, is affecting human health, wildlife behavior, and our ability to observe stars and other celestial objects
-      </p>
+
       <div class="hover_area">
         <img src="sky_dark.jpg">
         <img src="sky.jpg" class="hidden_image">
+      </div>
+
+      <div class="bottomOverlapContainer">
+        <h1 class="title">LIGHT POLLUTION</h1>
+        <p class="info_text_container"style="top:250px; width:600px;">
+          The excessive or inappropriate use of outdoor artificial light, is affecting human health, wildlife behavior, and our ability to observe stars and other celestial objects
+        </p>
       </div>
     </section>
 
@@ -159,24 +48,36 @@
       <h1 class="title">LEARN MORE</h1>
     </section>
 
-    <section class="section3"; id="section3">
+    <section class="section3" id="section3">
       <img src="background_sky.jpg">
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0FXJUP6_O1w?si=RdC7mi6Mhhu_5v3_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen;></iframe>
-      <div style="height:380px;width:500px"><img src="light_compare.jpg"></div>
-      <div class="info_container">
-        <a href="https://www.nwf.org/Home/Magazines/National-Wildlife/2023/Summer/Conservation/Light-Pollution-Wildlife">National Wildlife</a>
-        <p>: "How Light Pollution Impacts Wildlife & How You Can Help"</p>
-        <p>
-          Many animals are displaced by articial light, including sea turtle hatchlings. On beaches adjacent to roads and buildings, many emerging hatchlings head inland toward artificial lights instead of the ocean.
-        </p>
+
+      <!-- stuff! -->
+
+      <div class="bottomOverlapContainer">
+
+        <div>
+          <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/0FXJUP6_O1w' frameborder='0' allowfullscreen></iframe></div>
+          <img src="light_compare.jpg" />
+        </div>
+
+        <div>
+          <div class="info_container">
+            <p class="infoLinkContainer"><a href="https://www.nwf.org/Home/Magazines/National-Wildlife/2023/Summer/Conservation/Light-Pollution-Wildlife">National Wildlife</a>: "How Light Pollution Impacts Wildlife & How You Can Help"</p>
+            <p>
+              Many animals are displaced by articial light, including sea turtle hatchlings. On beaches adjacent to roads and buildings, many emerging hatchlings head inland toward artificial lights instead of the ocean.
+            </p>
+          </div>
+          <div class="info_container">
+            <p class="infoLinkContainer"><a href="https://darksky.org/">DarkSky International</a>: "How You Can Help"</p>
+            <p>
+              DarkSky International restores the nighttime environment and protects communities from the harmful effects of light pollution through outreach, advocacy, and conservation.
+            </p>
+          </div>
+        </div>
+
       </div>
-      <div class="info_container">
-        <a href="https://darksky.org/">DarkSky International</a>
-        <p>: "How You Can Help"</p>
-        <p>
-          DarkSky International restores the nighttime environment and protects communities from the harmful effects of light pollution through outreach, advocacy, and conservation.
-        </p>
-      </div>
+
+
     </section>
 
   </div>
